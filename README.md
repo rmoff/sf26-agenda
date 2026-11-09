@@ -2,6 +2,8 @@
 
 Unofficial, phone-first agenda for Current SF 2026, served by a Cloudflare Worker.
 
+<img width="1516" height="1578" alt="CleanShot 2026-11-09 at 17 56 46" src="https://github.com/user-attachments/assets/a752c01e-6e76-4a92-b0db-32cad95681d0" />
+
 An hourly cron fetches the Sessionboard feed, keeps an allowlist of fields (`src/trim.ts`) and stores the result in KV.
 
 ## Run locally
