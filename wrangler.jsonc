@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sf26-agenda",
+  "main": "src/index.ts",
+  "account_id": "8d56a7ca471ccdf550c9feffa02d05ba",
+  "compatibility_date": "2026-04-01",
+  "assets": { "directory": "./public" },
+  "kv_namespaces": [{ "binding": "AGENDA", "id": "dd78174afa814672a9edb22b2bc665a7" }],
+  "triggers": { "crons": ["17 * * * *"] },
+  "routes": [{ "pattern": "sf26.rmoff.net", "custom_domain": true }],
+  "workers_dev": true,
+  "vars": {
+    "FEED_URL": "https://api.sessionboard.com/embed/698a007d-4810-4c51-8a91-c8c4002755e9/agenda.json",
+    "OFFICIAL_URL": "https://current.confluent.io/san-francisco/sessions",
+    "EVENT_TIMEZONE": "America/Los_Angeles"
+  },
+  "observability": { "enabled": true }
+}
